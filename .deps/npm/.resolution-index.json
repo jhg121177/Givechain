@@ -6,5 +6,13 @@
         "file": "contracts/SimpleDonation.sol"
       }
     }
+  },
+  "contracts/Counter.sol": {
+    "__sources__": {
+      "contracts/Counter.sol": {
+        "content": "pragma solidity ^0.8.0;\r\n\r\ncontract Counter {\r\n    uint256 public count;\r\n    int256 public delta;\r\n\r\n    function inc(uint256 n) public {\r\n        count += n;\r\n        delta += int256(n);\r\n    }\r\n\r\n    function dec(uint256 n) public {\r\n        require(n <= count);\r\n        count -= n;\r\n        delta -= int256(n);\r\n    }\r\n}",
+        "file": "contracts/Counter.sol"
+      }
+    }
   }
 }
